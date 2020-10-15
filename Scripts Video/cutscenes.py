@@ -1,6 +1,7 @@
 from gerenciador import *
 from dicionarios import *
 
+
 class Cutscene:
     def __init__(self, falas, fala_final):
 
@@ -24,7 +25,6 @@ class Cutscene:
 
         self.cutscene_running = True
 
-
     def update(self):
         apertar = pygame.key.get_pressed()
         espaco = apertar[pygame.K_SPACE]
@@ -39,14 +39,12 @@ class Cutscene:
                     self.inicio_fala = 0
                     self.numero_fala = self.falas[self.etapa]
 
-
         elif self.etapa >= self.fala_final:
             if int(self.inicio_fala) < len(self.numero_fala):
                 self.inicio_fala += self.velocidade_fala
             else:
                 if espaco:
                     self.cutscene_running = False
-
         return self.cutscene_running
 
     def draw(self, janela):
@@ -60,6 +58,3 @@ class Cutscene:
             self.pos_x,
             self.pos_y
         )
-
-
-

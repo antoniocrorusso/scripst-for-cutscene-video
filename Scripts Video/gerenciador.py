@@ -3,6 +3,7 @@ import pygame
 PRETO = (0, 0, 0)
 BRANCO = (255, 255, 255)
 
+
 def colocar_texto(tela, texto, tamanho, cor, pos_x, pos_y):
     font = pygame.font.SysFont(None, tamanho)
     text_surface = font.render(texto, True, cor)
@@ -10,10 +11,11 @@ def colocar_texto(tela, texto, tamanho, cor, pos_x, pos_y):
     text_rect.topleft = (pos_x, pos_y)
     tela.blit(text_surface, text_rect)
 
+
 class Gerenciador:
     def __init__(self, janela):
         self.cut_scene = None
-        self.cut_scene_runnig = False
+        self.cut_scene_running = False
 
         # Variáveis
         self.janela = janela

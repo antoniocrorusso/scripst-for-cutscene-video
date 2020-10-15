@@ -25,17 +25,14 @@ while cutscene_playing:
             sys.exit()
 
     tela.fill(BRANCO)
-
     gerenciador.cut_scene_start(cut1)
-
     gerenciador.draw()
-
     gerenciador.update()
-
-    # Linha de debug, ignorar
-    # print(gerenciador.cut_scene_running)
-
     pygame.display.flip()
+
+    #if gerenciador.cut_scene_running == False:
+        #cutscene_playing = False
+
 
 
 
